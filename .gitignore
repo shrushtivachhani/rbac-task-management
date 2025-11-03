@@ -1,0 +1,11 @@
+# Node modules
+node_modules/
+.env
+dist/
+.vscode/
+.DS_Store
+
+# Build outputs
+rbac-task-frontend/dist/
+rbac-task-backend/node_modules/
+rbac-task-frontend/node_modules/

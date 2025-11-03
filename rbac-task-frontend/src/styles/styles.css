@@ -1,0 +1,31 @@
+:root {
+  --primary: #0b5cff;
+  --muted: #666;
+  --danger: #d9534f;
+  --gap: 12px;
+  --radius: 8px;
+  font-family: Inter, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}
+
+body { margin:0; padding:0; background:#f7fafc; color:#111; }
+.app-root { min-height:100vh; display:flex; flex-direction:column; }
+.navbar { display:flex; justify-content:space-between; align-items:center; padding:12px 20px; background:#fff; box-shadow:0 2px 6px rgba(0,0,0,0.05); }
+.brand a { text-decoration:none; color:var(--primary); font-weight:700; }
+.nav-links { display:flex; gap:10px; align-items:center; }
+.nav-links a { text-decoration:none; color:#333; padding:6px 10px; border-radius:6px; }
+.role-badge { padding:4px 8px; background:#eef2ff; border-radius:6px; font-size:12px; margin-left:8px; }
+.container { padding:20px; max-width:1100px; margin:20px auto; width:100%; }
+
+.auth-card { max-width:420px; margin:40px auto; background:#fff; padding:20px; border-radius:8px; box-shadow:0 6px 20px rgba(0,0,0,0.06); }
+.auth-card input { width:100%; padding:10px; margin:6px 0 12px; border:1px solid #ddd; border-radius:6px; }
+.btn { padding:8px 12px; background:var(--primary); color:#fff; border-radius:6px; border:none; cursor:pointer; }
+.btn-ghost { padding:6px 10px; border:1px solid #ddd; background:#fff; border-radius:6px; cursor:pointer; }
+.btn-danger { padding:6px 10px; background:var(--danger); color:#fff; border-radius:6px; border:none; cursor:pointer; }
+.card { background:#fff; padding:12px; margin:12px 0; border-radius:8px; box-shadow:0 4px 12px rgba(0,0,0,0.03); }
+
+.simple-table { width:100%; border-collapse: collapse; background:#fff; border-radius:8px; overflow:hidden; }
+.simple-table th, .simple-table td { padding:10px; border-bottom:1px solid #f0f0f0; text-align:left; }
+.simple-table thead { background:#fafafa; }
+.error { color:var(--danger); margin-top:8px; }
+
+input, select, textarea { font:inherit; }
