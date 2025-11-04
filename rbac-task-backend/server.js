@@ -2,6 +2,9 @@
 import dotenv from 'dotenv';
 dotenv.config();
 
+import moduleAlias from 'module-alias';
+moduleAlias.addAlias('punycode', 'punycode/');
+
 import express from 'express';
 import http from 'http';
 import mongoose from 'mongoose';
