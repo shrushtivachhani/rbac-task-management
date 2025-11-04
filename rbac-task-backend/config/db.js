@@ -9,4 +9,4 @@ const connectDB = async () => {
   console.log('MongoDB connected (via connectDB function)');
 };
 
-export default{ connectDB }; // Changed module.exports to export
+export default connectDB; // Changed module.exports to export

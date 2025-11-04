@@ -36,10 +36,8 @@ app.get('/', (req, res) => {
 });
 
 // ----- MongoDB connection -----
-const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/rbac_task_db';
-mongoose.connect(MONGO_URI, {
-  // options not required in mongoose v7 but harmless
-})
+import connectDB from './config/db.js';
+connectDB()
   .then(async () => {
     console.log('MongoDB connected');
     // Seed admin after connection
