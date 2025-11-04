@@ -40,7 +40,12 @@ const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/rbac_task_
 mongoose.connect(MONGO_URI, {
   // options not required in mongoose v7 but harmless
 })
-  .then(() => console.log('MongoDB connected'))
+  .then(async () => {
+    console.log('MongoDB connected');
+    // Seed admin after connection
+    const { seedAdminIfNeeded } = await import('./utils/seedAdmin.js');
+    await seedAdminIfNeeded();
+  })
   .catch(err => {
     console.error('MongoDB connection error:', err.message || err);
     // Do NOT exit immediately in dev if you want to debug; uncomment to exit on fail:

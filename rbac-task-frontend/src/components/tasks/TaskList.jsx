@@ -11,7 +11,7 @@ export default function TaskList({ tasks = [], refresh }) {
             <div>
               <div className="font-semibold">{task.title}</div>
               <div className="text-sm text-slate-600">{task.description}</div>
-              <div className="text-xs text-slate-400 mt-2">Status: {task.status || task.status?.toLowerCase()}</div>
+              <div className="text-xs text-slate-400 mt-2">Status: {task.status?.toLowerCase()}</div>
             </div>
             <div className="flex items-center gap-2">
               <TaskModal task={task} refresh={refresh} />

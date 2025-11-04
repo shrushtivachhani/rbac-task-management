@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useEffect, useState } from 'react';
 import api from '../api/api';
-import jwt_decode from 'jwt-decode';
+// Fix: Use a named import for jwtDecode
+import { jwtDecode } from 'jwt-decode';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 
@@ -29,7 +30,8 @@ export const AuthProvider = ({ children }) => {
     const token = localStorage.getItem('accessToken');
     if (token) {
       try {
-        const payload = jwt_decode(token);
+        // Fix: Use the imported jwtDecode function
+        const payload = jwtDecode(token);
         setUser({ id: payload.userId, role: payload.role, teamId: payload.teamId || null });
         api.defaults.headers.common['Authorization'] = `Bearer ${token}`;
       } catch (e) {

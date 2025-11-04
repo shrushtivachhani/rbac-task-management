@@ -7,7 +7,7 @@ export default function RoleList({ roles = [] }) {
       <ul>
         {roles.map(r => (
           <li key={r._id || r.id} className="py-2 border-b">
-            <div className="font-medium">{r.roleName || r.roleName || r.roleName}</div>
+            <div className="font-medium">{r.roleName}</div>
             <div className="text-sm text-slate-500">{r.description || r.accessLevel}</div>
           </li>
         ))}

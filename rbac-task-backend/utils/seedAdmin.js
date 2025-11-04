@@ -42,4 +42,4 @@ const seedAdminIfNeeded = async (appOrNull) => {
   console.log('Seeded Admin:', adminEmail);
 };
 
-export default { seedAdminIfNeeded };
+export { seedAdminIfNeeded };
